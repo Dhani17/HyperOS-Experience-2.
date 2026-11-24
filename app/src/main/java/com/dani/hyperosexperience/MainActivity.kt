@@ -171,11 +171,16 @@ private fun LauncherHome(
     }
 }
 
+
 @Composable
-private fun QuickTile(title: String, subtitle: String) {
+private fun RowScope.QuickTile(title: String, subtitle: String) {
     Column(
-        modifier = Modifier.weight(1f)
-            .background(Color.White.copy(alpha = 0.82f), RoundedCornerShape(20.dp))
+        modifier = Modifier
+            .weight(1f)
+            .background(
+                Color.White.copy(alpha = 0.82f),
+                RoundedCornerShape(20.dp)
+            )
             .padding(14.dp)
     ) {
         Text(title, color = Ink, fontWeight = FontWeight.SemiBold)
